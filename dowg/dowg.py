@@ -10,13 +10,8 @@ class DoWG(Optimizer):
     """Implements DoWG optimization algorithm.
     
     Args:
-        params (iterable): iterable of parameters to optimize or dicts defining
-            parameter groups
-        lr (float, optional): learning rate (default: 0.001)
-        betas (Tuple[float, float], optional): coefficients used for computing
-            running averages of gradient and its square (default: (0, 0))
         eps (float, optional): term added to the denominator to improve
-            numerical stability (default: 1e-8)
+            numerical stability (default: 1e-4). Also used as the default squared distance estimate.
     """
 
     def __init__(self, params, eps=1e-4):
